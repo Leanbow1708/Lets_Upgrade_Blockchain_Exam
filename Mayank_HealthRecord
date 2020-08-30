@@ -1,0 +1,32 @@
+pragma solidity 0.4.22 <= 0.6.12;
+
+contract MayankHealthRecord{
+    
+    
+    string name;
+    string bloodGroup;
+    int weight;
+    int heightInCM;
+    string anyPreviousDisease;
+    int age;
+    
+    
+    function MayankHealthRecord(string newName,string newBloodGroup,int newWeight,int newHeight,string newRecord,int newAge) public{
+        
+        name = newName;
+        bloodGroup = newBloodGroup;
+        weight = newWeight;
+        heightInCM = newHeight;
+        anyPreviousDisease = newRecord;
+        age = newAge;
+    }
+    function showRecord()public view returns(string,string,int,int,string,int){
+        return(name,bloodGroup,weight,heightInCM,anyPreviousDisease,age);
+    }
+    function updateWeight(int newWeight) public{
+        
+        weight = newWeight;
+        
+    }
+  
+}
